@@ -1,0 +1,34 @@
+POST  http://localhost:3334/events
+Content-Type: application/json
+
+{
+    "title": 123,
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3334/events/945c4670-4f38-4e54-9611-fecf5626ad9c/attendees
+Content-Type: application/json
+
+{
+    "name": "Bruno Gregorio",
+    "email": "bruno2@greg.com.br"
+}
+
+###
+
+GET http://localhost:3334/events/945c4670-4f38-4e54-9611-fecf5626ad9c
+
+###
+
+GET  http://localhost:3334/attendees/1/badge
+
+###
+
+GET  http://localhost:3334/attendees/2/check-in
+
+###
+
+GET http://localhost:3334/events/945c4670-4f38-4e54-9611-fecf5626ad9c/attendees?query=Bruno
